@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+}
+html,
+body{
+    height: 100%;
+}
+body{
+    display: grid;
+    grid-template-areas:
+     'cabecalho cabecalho'
+     'lado-esquerdo pincipal'
+     'rodape rodape';
+
+     grid-template-rows: 64px 1fr 128px;
+     grid-template-columns: 256px 1fr;
+}
+
+header{
+    grid-area: cabecalho;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+aside{
+    grid-area: lado-esquerdo;
+    background-color: rgb(211, 208, 23);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+} 
+main{
+    grid-area: pincipal;
+    background-color: rgb(10, 155, 41);
+}
+footer{
+    grid-area: rodape;
+    background-color: rgb(255, 136, 0);
+}
+.avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+}
